@@ -44,7 +44,7 @@ public class LojaController {
         return ResponseEntity.status(HttpStatus.OK).body(productRepository.findAll());
     }
 
-    @PostMapping("/starstore/cclient")
+    @PostMapping("/starstore/client")
     public ResponseEntity<Object> createClient(@RequestBody @Valid ClientRecordDto clientData) {
         ClientsModel client = new ClientsModel();
         BeanUtils.copyProperties(clientData, client);
